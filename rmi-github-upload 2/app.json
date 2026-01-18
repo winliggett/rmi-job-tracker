@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "RMI Job Tracker",
+    "slug": "rmi-job-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1C3B59"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.rmi.jobtracker",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app uses voice recording to create job notes hands-free while you're on job sites.",
+        "NSCameraUsageDescription": "This app needs camera access to take photos of job sites and work progress.",
+        "NSPhotoLibraryUsageDescription": "This app needs photo library access to attach existing photos to jobs."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1C3B59"
+      },
+      "package": "com.rmi.jobtracker",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to attach images to jobs."
+        }
+      ]
+    ]
+  }
+}
